@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description texte="" courant="AFFICHER surface"/>
+    <description courant="AFFICHER &quot; m²&quot;" texte=""/>
     <extension extnom="inactif"/>
     <fonction fctetat="inactif" fctcode=""/>
-    <F2 F2etat="inactif" F2para="" F2defaut="" F2lignes=""/>
+    <F2 F2lignes="" F2etat="inactif" F2para="" F2defaut=""/>
     <repere repcode="-10#10#-10#10#2#2" repetat="inactif"/>
-    <param epaisseurPoint="2" totalBoucles="5000000" maxBoucle="500000" arrondiAuto="vrai" totalAffichages="1000" epaisseurLigne="2" nbDecimales="8"/>
-    <item code="200#declarationfonctions" algoitem="FONCTIONS_UTILISEES"/>
-    <item code="100#declarationsvariables" algoitem="VARIABLES">
-        <item code="1#NOMBRE#rayon" algoitem="rayon EST_DU_TYPE NOMBRE"/>
-        <item code="1#NOMBRE#surface" algoitem="surface EST_DU_TYPE NOMBRE"/>
+    <param maxBoucle="500000" totalAffichages="1000" totalBoucles="5000000" nbDecimales="8" arrondiAuto="vrai" epaisseurLigne="2" epaisseurPoint="2"/>
+    <item algoitem="FONCTIONS_UTILISEES" code="200#declarationfonctions"/>
+    <item algoitem="VARIABLES" code="100#declarationsvariables">
+        <item algoitem="rayon EST_DU_TYPE NOMBRE" code="1#NOMBRE#rayon"/>
+        <item algoitem="surface EST_DU_TYPE NOMBRE" code="1#NOMBRE#surface"/>
     </item>
-    <item code="101#debutalgo" algoitem="DEBUT_ALGORITHME">
-        <item code="2#rayon#pasliste" algoitem="LIRE rayon"/>
-        <item code="5#surface#3.14152*rayon*rayon#pasliste" algoitem="surface PREND_LA_VALEUR 3.14152*rayon*rayon"/>
-        <item code="4#la surface est de : #0" algoitem="AFFICHER &quot;la surface est de : &quot;"/>
-        <item code="3#surface#0#pasliste" algoitem="AFFICHER surface"/>
-        <item code="4#m^2#0" algoitem="AFFICHER &quot;m^2&quot;"/>
+    <item algoitem="DEBUT_ALGORITHME" code="101#debutalgo">
+        <item algoitem="LIRE rayon" code="2#rayon#pasliste"/>
+        <item algoitem="surface PREND_LA_VALEUR 3.14152*rayon*rayon" code="5#surface#3.14152*rayon*rayon#pasliste"/>
+        <item algoitem="AFFICHER &quot;la surface est de : &quot;" code="4#la surface est de : #0"/>
+        <item algoitem="AFFICHER surface" code="3#surface#0#pasliste"/>
+        <item algoitem="AFFICHER &quot; m²&quot;" code="4# m²#0"/>
     </item>
-    <item code="102#finalgo" algoitem="FIN_ALGORITHME"/>
+    <item algoitem="FIN_ALGORITHME" code="102#finalgo"/>
 </Algo>
