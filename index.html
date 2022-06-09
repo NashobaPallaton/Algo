@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+let credit = 0, retrait = 0, solde = 0, agio = 0, virement = 0;
+credit = 386;
+proglab.println("Banque Thief");
+proglab.print("Votre compte : ");
+proglab.print(credit);
+proglab.println(" €");
+retrait = proglab.inputNumber("Entrez retrait");
+if (retrait > credit) {
+	agio = 8 + (retrait - credit) * 0.15;
+	proglab.print("Agio : ");
+	proglab.println(agio);
+	proglab.println(" €");
+}
+solde = credit - retrait - agio;
+proglab.print("Retrait : ");
+proglab.print(retrait);
+proglab.println(" €");
+proglab.print("Votre solde est de : ");
+proglab.print(solde);
+proglab.println(" €");
+virement = proglab.inputNumber("Entrez virement");
+solde = solde + virement;
+proglab.print("Virement : ");
+proglab.print(virement);
+proglab.println(" €");
+proglab.print("Votre solde est de : ");
+proglab.print(solde);
+proglab.print(" €");
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
