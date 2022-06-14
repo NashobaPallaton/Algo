@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Algo>
-    <description texte="" courant="LIRE choix"/>
+    <description texte="" courant="LIRE paiment"/>
     <extension extnom="inactif"/>
-    <fonction fctetat="inactif" fctcode=""/>
-    <F2 F2etat="inactif" F2defaut="" F2para="" F2lignes=""/>
+    <fonction fctcode="" fctetat="inactif"/>
+    <F2 F2lignes="" F2para="" F2defaut="" F2etat="inactif"/>
     <repere repcode="-10#10#-10#10#2#2" repetat="inactif"/>
-    <param epaisseurLigne="2" nbDecimales="8" maxBoucle="500000" arrondiAuto="vrai" epaisseurPoint="2" totalBoucles="5000000" totalAffichages="1000"/>
+    <param maxBoucle="500000" epaisseurPoint="2" arrondiAuto="vrai" totalBoucles="5000000" totalAffichages="1000" nbDecimales="8" epaisseurLigne="2"/>
     <item code="200#declarationfonctions" algoitem="FONCTIONS_UTILISEES"/>
     <item code="100#declarationsvariables" algoitem="VARIABLES">
         <item code="1#NOMBRE#solde" algoitem="solde EST_DU_TYPE NOMBRE"/>
@@ -19,7 +19,7 @@
     </item>
     <item code="101#debutalgo" algoitem="DEBUT_ALGORITHME">
         <item code="5#solde#0#pasliste" algoitem="solde PREND_LA_VALEUR 0"/>
-        <item code="5#the#1#pasliste" algoitem="the PREND_LA_VALEUR 1"/>
+        <item code="5#the#1.2#pasliste" algoitem="the PREND_LA_VALEUR 1.2"/>
         <item code="5#cafe#0.5#pasliste" algoitem="cafe PREND_LA_VALEUR 0.5"/>
         <item code="5#coca#1.7#pasliste" algoitem="coca PREND_LA_VALEUR 1.7"/>
         <item code="4#Distributeur Boisson#1" algoitem="AFFICHER &quot;Distributeur Boisson&quot;"/>
@@ -32,8 +32,8 @@
             <item code="2#choix#pasliste" algoitem="LIRE choix"/>
             <item code="6#choix==1" algoitem="SI (choix==1) ALORS">
                 <item code="7#debutsi" algoitem="DEBUT_SI"/>
-                <item code="4#Prix : 0.50€#1" algoitem="AFFICHER &quot;Prix : 0.50€&quot;"/>
-                <item code="6#solde&lt;boisson" algoitem="SI (solde&lt;boisson) ALORS">
+                <item code="4#Prix : 0.5€#1" algoitem="AFFICHER &quot;Prix : 0.5€&quot;"/>
+                <item code="6#solde&lt;cafe" algoitem="SI (solde&lt;cafe) ALORS">
                     <item code="7#debutsi" algoitem="DEBUT_SI"/>
                     <item code="2#paiment#pasliste" algoitem="LIRE paiment"/>
                     <item code="8#finsi" algoitem="FIN_SI"/>
@@ -52,7 +52,7 @@
             </item>
             <item code="6#choix==2" algoitem="SI (choix==2) ALORS">
                 <item code="7#debutsi" algoitem="DEBUT_SI"/>
-                <item code="4#Prix : 1.00€#1" algoitem="AFFICHER &quot;Prix : 1.00€&quot;"/>
+                <item code="4#Prix : 1.20€#1" algoitem="AFFICHER &quot;Prix : 1.20€&quot;"/>
                 <item code="6#solde&lt;the" algoitem="SI (solde&lt;the) ALORS">
                     <item code="7#debutsi" algoitem="DEBUT_SI"/>
                     <item code="2#paiment#pasliste" algoitem="LIRE paiment"/>
